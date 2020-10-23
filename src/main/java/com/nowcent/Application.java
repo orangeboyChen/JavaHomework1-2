@@ -40,7 +40,7 @@ public class Application {
         System.out.println("整理前 => " + list);
 
         List<Integer> collect = list.stream().sorted().collect(Collectors.toList());
-        System.out.println("整理后=>" + collect);
+        System.out.println("整理后 => " + collect);
 
         IntSummaryStatistics intSummaryStatistics = collect.parallelStream().mapToInt(Integer::intValue).summaryStatistics();
 
