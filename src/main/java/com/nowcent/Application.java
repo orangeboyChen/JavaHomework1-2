@@ -29,7 +29,7 @@ public class Application {
         System.out.println("\n[20.17]");
         List<Integer> list = new LinkedList<>();
         for (int i = 0; i < 25; i++) {
-            list.add(new Random(System.currentTimeMillis()).nextInt(100));
+            list.add(new Random(System.currentTimeMillis()).nextInt(101));
             try {
                 Thread.sleep(10);
             } catch (InterruptedException e) {
