@@ -27,7 +27,7 @@ public class Application {
 
     public static void T20_17(){
         System.out.println("\n[20.17]");
-        List<Integer> list = new ArrayList<>(25);
+        List<Integer> list = new LinkedList<>();
         for (int i = 0; i < 25; i++) {
             list.add(new Random(System.currentTimeMillis()).nextInt(100));
             try {
@@ -51,7 +51,9 @@ public class Application {
     public static void T20_18(List<Character> chars){
         System.out.println("\n[20.18]");
         System.out.println("整理前 => " + chars);
-        Collections.reverse(chars);
+
+        List<Character> reversedChars = chars.subList(0, chars.size());
+        Collections.reverse(reversedChars);
         System.out.println("整理后 => " + chars);
     }
 
